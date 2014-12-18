@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQM Lazy Loading - MVC</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<script src="http://common.xybersolve.com/js/lib/jquery/jquery-1.10.1.min.js"></script>	
+<link href="http://common.xybersolve.com/js/lib/jquery.mobile.1.4.1/jquery.mobile-1.4.1.min.css" rel="stylesheet" type="text/css" >
+<script src="http://common.xybersolve.com/js/lib/jquery.mobile.1.4.1/jquery.mobile-1.4.1.min.js"></script>
+
+
+<script src="http://common.xybersolve.com/js/entity/Nodes.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+    app.registerModules({
+        Main: {
+            name: 'Main',
+            title: 'Main',
+            display: 'Main Page',
+            controller: 'Main.js',
+            view: 'main.html',
+            canBeDefault: true,
+            isMenuItem: false
+        },
+        Module1: {
+            name: 'Module1',
+            title: 'Module1',
+            display: 'View Module 1',
+            controller: 'Module1.js',
+            view: 'module1.html',
+            canBeDefault: true,
+            isMenuItem: true
+        },
+        Module2: {
+            name: 'Module2',
+            title: 'Module2',
+            display: 'View Module 2',
+            controller: 'Module2.js',
+            view: 'module2.html',
+            canBeDefault: true,
+            isMenuItem: true
+        }
+    });
+    $(document).ready(function(){
+        app.initialize();
+    });
+
+
+</script>
+
+</head>
+    <body>
+
+        <div data-role="page" id="Main">
+            <div id="header" data-role="header" data-theme="a" class="heading" data-position="fixed">
+                <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
+                    <a id="go-back-button" href="#" class="ui-btn ui-btn-a ui-btn-inline ui-btn-mini ui-corner-all ui-overlay-shadow ui-shadow ui-icon-back ui-btn-icon-left" >Back</a>
+                    <a id="menu-toggle-button" href="#nav-panel" class="ui-btn ui-btn-b ui-btn-inline ui-btn-mini ui-corner-all ui-overlay-shadow ui-shadow ui-icon-bars ui-btn-icon-left">Menu</a>
+
+                </div>
+                <h1 id="mainTitle" class="ui-title">App Title</h1>
+            </div>
+
+            <div data-role="content" id="content"></div>
+
+            <div id="footer" data-role="footer" data-theme="a" data-position="fixed">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="#" id="new" class="ui-btn ui-btn-a ui-mini ui-btn-inline ui-icon-plus ui-btn-icon-right ui-shadow-icon">New</a>
+                    <a href="#" id="save" class="ui-btn ui-btn-a ui-mini ui-btn-inline ui-icon-save ui-btn-icon-right ui-shadow-icon">Save</a>
+                    <a href="#" id="edit" class="ui-btn ui-btn-a ui-mini ui-btn-inline ui-icon-edit ui-btn-icon-right ui-shadow-icon">Edit</a>
+                    <a href="#" id="delete" class="ui-btn ui-btn-a ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right ui-shadow-icon">Delete</a>
+                </div>
+            </div>
+
+            <div data-role="panel" id="nav-panel" data-theme="a" data-display="reveal" data-dismissible="true" >
+                <ul id="nav-panel-menu-list" data-role="listview" data-filter-theme="c" data-divider-theme="d" data-inset="true"></ul>
+            </div>
+
+        </div>
+
+    </body>
+</html>
+

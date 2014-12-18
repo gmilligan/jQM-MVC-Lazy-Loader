@@ -1,0 +1,25 @@
+{
+  "name": "project-jqm-mvc",
+  "version": "0.0.0",
+  "description": "Lazy Loading MVC for jQuery Mobile",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "project-jqm-mvc.git"
+  },
+  "keywords": [
+    "jQuery",
+    "Mobile",
+    "MVC",
+    "Lazy",
+    "Loading"
+  ],
+  "author": "Greg Milligan",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt-cli": "^0.1.13"
+  }
+}
