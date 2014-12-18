@@ -109,13 +109,6 @@ var app = {
       self._loadController(id, cb);
     });
   },
-  cleanUpPage: function(id){
-    var self = this;
-    if(id !== 'Sign'){
-      $('#sign-setting-button').hide();
-      $('#logout-button').show();
-    }
-  },
   showPageLoadingMessage: function (msg) {
     if (msg) {
       $.mobile.loadingMessage = true;
@@ -128,11 +121,6 @@ var app = {
       //$.mobile.hidePageLoadingMsg();
       //$.mobile.loadingMessage = 'Loading';
     }
-  },
-  showMessage: function (module) {
-    var $content = $('#content');
-    $content.html('Load module: <strong>' + module.name + '</strong>');
-    $content.addClass('center-content');
   },
   showFeedback: function (id, msg, css, time, cb) {
     time = time || 4000;
@@ -205,6 +193,13 @@ var app = {
       }
     }
   },
+  cleanUpPage: function(id) {
+    var self = this;
+    if (id !== 'Sign') {
+      $('#sign-setting-button').hide();
+      $('#logout-button').show();
+    }
+  },
   createPage: function () {
     var self = this;
     // this is faster - use it first
@@ -220,9 +215,6 @@ var app = {
     var self = this;
     self.$page.listview().listview('refresh');
     return self;
-  },
-  fixToolbar: function(){
-    var self = this;
   },
   getPageSize: function(){
     var self = this;
@@ -247,12 +239,16 @@ var app = {
   },
 
 /* --------------------------------------
-   Private Methods
+ Private Properies
 */
   _currentObject: {},
   _scriptCache: [],
   _moduleCache: [],
   _modules: {},
+
+/* --------------------------------------
+ Private Methods
+*/
   _loadLastModule: function () {
     var self = this;
     // look back 2 modules and load it
