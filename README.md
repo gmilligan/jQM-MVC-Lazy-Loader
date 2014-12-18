@@ -25,6 +25,7 @@ This is not meant to be a all encompassing framework (it is only 300 lines of co
 Rather it is a spring board for certain jQM projects, which want to employ lazy loading.
 I have used it in several projects now and it seems to be pretty solid. 
 
+
 ----
 
 <a name="ui"></a>
@@ -43,10 +44,10 @@ So, its is left to the developer to decide the implementation.
 Examples of Navigation Interfaces: 
 
 ####Tablet UI (Slide out Menu)
-![Tablet UI](http://common.xybersolve.com/jQM-Lazy-Loading-MVC/screenshots/optimized/tablet-composite.png "Tablet UI")
+![Tablet UI](http://common.xybersolve.com/jQM-MVC-Lazy-Loader/screenshots/optimized/tablet-composite.png "Tablet UI")
 
 ####Phone UI (List Menu, with Back Button)
-![Phone UI](http://common.xybersolve.com/jQM-Lazy-Loading-MVC/screenshots/optimized/iphone-composite.png "Phone UI")
+![Phone UI](http://common.xybersolve.com/jQM-MVC-Lazy-Loader/screenshots/optimized/iphone-composite.png "Phone UI")
 
 ----
 
@@ -248,4 +249,4 @@ Private methods of `app`:
 <a name="demo"></a>
 ##Demo of Project-jQM-MVC
 Here is a demonstration of the library in action (in Tablet Mode). 
-[Demo of jQM-MVC](http://common.xybersolve.com/jQM-Lazy-Loading-MVC/index.html)
+[Demo of jQM-MVC-Lazy-Loader](http://common.xybersolve.com/jQM-MVC-Lazy-Loader/index.html)
